@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter  } from 'react-router-dom';
 import Home from './containers/HomeContainers';
 import TestRoute from './components/TestRoute';
 
@@ -12,12 +12,12 @@ import TestRoute from './components/TestRoute';
 class AppRoutes extends Component {
 	render() {
 		return (
-            <BrowserRouter>
+            <HashRouter hasType = "hashbang">
                 <Routes >
                     <Route exact path='/' element={<Home/>} />
                     <Route exact path = '/route' element={<TestRoute/>} /> 
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
                     
 		)
 	}
